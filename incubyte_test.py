@@ -27,5 +27,13 @@ class SpacecraftTestCase(unittest.TestCase):
         result2 = navigate_spacecraft(initial_position_3, initial_direction_3, commands_3)
         self.assertEqual(result2, ((10, 5, -3), 'N'))
 
+    def test_spacecraft_navigation3(self):
+        # Test case 4
+        initial_position_4 = (2, 4, 9)
+        initial_direction_4 = 'Down'
+        commands_4 = ['f', 'r', 'l', 'u', 'b', 'f','d','b','f']
+        result3 = navigate_spacecraft(initial_position_4, initial_direction_4, commands_4)
+        self.assertEqual(result3, ((2, 4, 8), 'N'))
+
 if __name__ == '__main__':
     unittest.main()
